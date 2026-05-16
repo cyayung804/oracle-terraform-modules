@@ -1,0 +1,26 @@
+module "vcn" {
+  source                        = "oracle-terraform-modules/vcn/oci"
+  version                       = "3.6.0"
+  attached_drg_id               = var.attached_drg_id
+  region                        = var.region
+  internet_gateway_display_name = var.internet_gateway_display_name
+  create_service_gateway        = var.create_service_gateway
+  vcn_cidrs                     = var.vcn_cidrs
+  vcn_name                      = var.vcn_name
+  local_peering_gateways        = var.local_peering_gateways
+  internet_gateway_route_rules  = var.internet_gateway_route_rules
+  label_prefix                  = var.label_prefix
+  defined_tags                  = var.defined_tags
+  enable_ipv6                   = var.enable_ipv6
+  nat_gateway_public_ip_id      = var.nat_gateway_public_ip_id
+  vcn_dns_label                 = var.vcn_dns_label
+  service_gateway_display_name  = var.service_gateway_display_name
+  freeform_tags                 = var.freeform_tags
+  create_nat_gateway            = var.create_nat_gateway
+  lockdown_default_seclist      = var.lockdown_default_seclist
+  nat_gateway_display_name      = var.nat_gateway_display_name
+  nat_gateway_route_rules       = var.nat_gateway_route_rules
+  subnets                       = var.subnets
+  compartment_id                = var.compartment_id
+  create_internet_gateway       = var.create_internet_gateway
+}

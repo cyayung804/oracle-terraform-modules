@@ -1,0 +1,22 @@
+module "oke_utilities" {
+  source                         = "oracle-terraform-modules/oke/oci//modules/utilities"
+  version                        = "5.4.3"
+  region                         = var.region
+  worker_pools                   = var.worker_pools
+  operator_user                  = var.operator_user
+  expected_node_count            = var.expected_node_count
+  worker_drain_timeout_seconds   = var.worker_drain_timeout_seconds
+  bastion_host                   = var.bastion_host
+  operator_host                  = var.operator_host
+  ssh_private_key                = var.ssh_private_key
+  ocir_username                  = var.ocir_username
+  await_node_readiness           = var.await_node_readiness
+  worker_drain_ignore_daemonsets = var.worker_drain_ignore_daemonsets
+  ocir_secret_name               = var.ocir_secret_name
+  ocir_secret_namespace          = var.ocir_secret_namespace
+  expected_drain_count           = var.expected_drain_count
+  worker_drain_delete_local_data = var.worker_drain_delete_local_data
+  bastion_user                   = var.bastion_user
+  ocir_email_address             = var.ocir_email_address
+  ocir_secret_id                 = var.ocir_secret_id
+}

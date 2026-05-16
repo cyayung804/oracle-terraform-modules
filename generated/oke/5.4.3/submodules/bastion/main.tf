@@ -1,0 +1,26 @@
+module "oke_bastion" {
+  source                         = "oracle-terraform-modules/oke/oci//modules/bastion"
+  version                        = "5.4.3"
+  await_cloudinit                = var.await_cloudinit
+  bastion_image_os_version       = var.bastion_image_os_version
+  image_id                       = var.image_id
+  is_public                      = var.is_public
+  nsg_ids                        = var.nsg_ids
+  upgrade                        = var.upgrade
+  user                           = var.user
+  volume_kms_key_id              = var.volume_kms_key_id
+  ssh_private_key                = var.ssh_private_key
+  timezone                       = var.timezone
+  compartment_id                 = var.compartment_id
+  state_id                       = var.state_id
+  assign_dns                     = var.assign_dns
+  ssh_public_key                 = var.ssh_public_key
+  subnet_id                      = var.subnet_id
+  defined_tags                   = var.defined_tags
+  freeform_tags                  = var.freeform_tags
+  use_defined_tags               = var.use_defined_tags
+  availability_domain            = var.availability_domain
+  shape                          = var.shape
+  legacy_imds_endpoints_disabled = var.legacy_imds_endpoints_disabled
+  tag_namespace                  = var.tag_namespace
+}
